@@ -1,12 +1,13 @@
-public class GriffindorStudent extends HogwartsStudent{
+public class GriffindorStudent extends HogwartsStudent {
 
     private int nobility, honor, bravery;
 
     @Override
     public String toString() {
         return "\nИмя: " + getName()
-                + "\nУровень колдовства: " + getMagic()
-                + "\nУровень трансгрессии: " + getTransgression()
+                + "\nФакультет: Гриффиндор"
+                + "\nКолдовство: " + getMagic()
+                + "\nТрансгрессия: " + getTransgression()
                 + "\nБлагородство: " + this.nobility
                 + "\nЧесть: " + this.honor
                 + "\nХрабрость " + this.bravery;
@@ -42,4 +43,5 @@ public class GriffindorStudent extends HogwartsStudent{
     public void setBravery(int bravery) {
         this.bravery = bravery;
     }
+
 }

@@ -5,8 +5,9 @@ public class SlytherinStudent extends HogwartsStudent{
     @Override
     public String toString() {
         return "\nИмя: " + getName()
-                + "\nУровень колдовства: " + getMagic()
-                + "\nУровень трансгрессии: " + getTransgression()
+                + "\nФакультет: Слизерин"
+                + "\nКолдовство: " + getMagic()
+                + "\nТрансгрессия: " + getTransgression()
                 + "\nХитрость: " + this.cunning
                 + "\nРешительность: " + this.determination
                 + "\nАмбициозность: " + this.ambition

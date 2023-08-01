@@ -5,8 +5,9 @@ public class HufflepuffStudent extends HogwartsStudent{
     @Override
     public String toString() {
         return "\nИмя: " + getName()
-                + "\nУровень колдовства: " + getMagic()
-                + "\nУровень трансгрессии: " + getTransgression()
+                + "\nФакультет: Пуффендуй"
+                + "\nКолдовство: " + getMagic()
+                + "\nТрансгрессия: " + getTransgression()
                 + "\nУсердие: " + this.diligence
                 + "\nПреданность: " + this.loyal
                 + "\nЧестность " + this.honest;

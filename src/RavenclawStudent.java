@@ -5,8 +5,9 @@ public class RavenclawStudent extends  HogwartsStudent{
     @Override
     public String toString() {
         return "\nИмя: " + getName()
-                + "\nУровень колдовства: " + getMagic()
-                + "\nУровень трансгрессии: " + getTransgression()
+                + "\nФакультет: Когтевран"
+                + "\nКолдовство: " + getMagic()
+                + "\nТрансгрессия: " + getTransgression()
                 + "\nУм: " + this.mind
                 + "\nМудрость: " + this.wisdom
                 + "\nОстроумие: " + this.wit
