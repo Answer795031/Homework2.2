@@ -44,23 +44,32 @@ public class SlytherinStudent extends HogwartsStudent{
         return perfidy;
     }
 
-    public void setCunning(int cunning) {
-        this.cunning = cunning;
-    }
+    public void slytherinStudentsCompare(SlytherinStudent slytherinStudent) {
+        // метод сравнения студентов внутри факультета
 
-    public void setDetermination(int determination) {
-        this.determination = determination;
-    }
+        System.out.println();
 
-    public void setAmbition(int ambition) {
-        this.ambition = ambition;
-    }
+        int sum1 = this.getMagic()
+                + this.getTransgression()
+                + this.getCunning()
+                + this.getDetermination()
+                + this.getAmbition()
+                + this.getResourcefulness()
+                + this.getPerfidy();
 
-    public void setResourcefulness(int resourcefulness) {
-        this.resourcefulness = resourcefulness;
-    }
+        int sum2 = slytherinStudent.getMagic()
+                + slytherinStudent.getTransgression()
+                + slytherinStudent.getCunning()
+                + slytherinStudent.getDetermination()
+                + slytherinStudent.getAmbition()
+                + slytherinStudent.getResourcefulness()
+                + slytherinStudent.getPerfidy();
 
-    public void setPerfidy(int perfidy) {
-        this.perfidy = perfidy;
+        System.out.println("Сумма баллов студента " + this.getName() + " - " + sum1);
+        System.out.println("Сумма баллов студента " + slytherinStudent.getName() + " - " + sum2);
+
+        String res = sum1 > sum2 ? this.getName() + " - лучший слизеринец" : slytherinStudent.getName() + " - лучший слизеринец";
+
+        System.out.println(res);
     }
 }

@@ -38,19 +38,30 @@ public class RavenclawStudent extends  HogwartsStudent{
         return creativity;
     }
 
-    public void setMind(int mind) {
-        this.mind = mind;
-    }
+    public void ravenclawStudentsCompare(RavenclawStudent ravenclawStudent) {
+        // метод сравнения студентов внутри факультета
 
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
+        System.out.println();
 
-    public void setWit(int wit) {
-        this.wit = wit;
-    }
+        int sum1 = this.getMagic()
+                + this.getTransgression()
+                + this.getMind()
+                + this.getWisdom()
+                + this.getWit()
+                + this.getCreativity();
 
-    public void setCreativity(int creativity) {
-        this.creativity = creativity;
+        int sum2 = ravenclawStudent.getMagic()
+                + ravenclawStudent.getTransgression()
+                + ravenclawStudent.getMind()
+                + ravenclawStudent.getWisdom()
+                + ravenclawStudent.getWit()
+                + ravenclawStudent.getCreativity();
+
+        System.out.println("Сумма баллов студента " + this.getName() + " - " + sum1);
+        System.out.println("Сумма баллов студента " + ravenclawStudent.getName() + " - " + sum2);
+
+        String res = sum1 > sum2 ? this.getName() + " - лучший когтевранец" : ravenclawStudent.getName() + " - лучший когтевранец";
+
+        System.out.println(res);
     }
 }

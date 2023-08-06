@@ -32,15 +32,28 @@ public class HufflepuffStudent extends HogwartsStudent{
         return honest;
     }
 
-    public void setDiligence(int diligence) {
-        this.diligence = diligence;
-    }
+    public void hufflepuffStudentsCompare(HufflepuffStudent hufflepuffStudent) {
+        // метод сравнения студентов внутри факультета
 
-    public void setLoyal(int loyal) {
-        this.loyal = loyal;
-    }
+        System.out.println();
 
-    public void setHonest(int honest) {
-        this.honest = honest;
+        int sum1 = this.getMagic()
+                + this.getTransgression()
+                + this.getDiligence()
+                + this.getLoyal()
+                + this.getHonest();
+
+        int sum2 = hufflepuffStudent.getMagic()
+                + hufflepuffStudent.getTransgression()
+                + hufflepuffStudent.getDiligence()
+                + hufflepuffStudent.getLoyal()
+                + hufflepuffStudent.getHonest();
+
+        System.out.println("Сумма баллов студента " + this.getName() + " - " + sum1);
+        System.out.println("Сумма баллов студента " + hufflepuffStudent.getName() + " - " + sum2);
+
+        String res = sum1 > sum2 ? this.getName() + " - лучший пуффендуец" : hufflepuffStudent.getName() + " - лучший пуффендуец";
+
+        System.out.println(res);
     }
 }

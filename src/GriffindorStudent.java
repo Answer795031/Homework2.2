@@ -32,16 +32,29 @@ public class GriffindorStudent extends HogwartsStudent {
         return bravery;
     }
 
-    public void setNobility(int nobility) {
-        this.nobility = nobility;
-    }
+    public void griffindorStudentsCompare(GriffindorStudent griffindorStudent) {
+        // метод сравнения студентов внутри факультета
 
-    public void setHonor(int honor) {
-        this.honor = honor;
-    }
+        System.out.println();
 
-    public void setBravery(int bravery) {
-        this.bravery = bravery;
+        int sum1 = this.getMagic()
+                + this.getTransgression()
+                + this.getNobility()
+                + this.getHonor()
+                + this.getBravery();
+
+        int sum2 = griffindorStudent.getMagic()
+                + griffindorStudent.getTransgression()
+                + griffindorStudent.getNobility()
+                + griffindorStudent.getHonor()
+                + griffindorStudent.getBravery();
+
+        System.out.println("Сумма баллов студента " + this.getName() + " - " + sum1);
+        System.out.println("Сумма баллов студента " + griffindorStudent.getName() + " - " + sum2);
+
+        String res = sum1 > sum2 ? this.getName() + " - лучший гриффиндорец" : griffindorStudent.getName() + " - лучший гриффиндорец";
+
+        System.out.println(res);
     }
 
 }
